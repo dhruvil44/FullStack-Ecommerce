@@ -1,7 +1,7 @@
 # FullStack-Ecommerce
 
 Developed(Still in progress) a FullStack Ecommerce Platform using 2 Technologies,
-ANGULAR(Fronend) and SPRING BOOT(Backend) and MySQL as the Database.
+ANGULAR(Frontend) and SPRING BOOT(Backend) and MySQL as the Database.
 
 Home Page (By Default will show the products of category 1 (BOOKS))
 ![](/images/Screenshot%20(73).png)
