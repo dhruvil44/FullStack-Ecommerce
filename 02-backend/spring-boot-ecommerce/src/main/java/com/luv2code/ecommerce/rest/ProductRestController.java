@@ -15,27 +15,17 @@ import java.util.Optional;
 public class ProductRestController {
 
     @Autowired
-    private ProductRepository prepo;
+    private ProductRepository productRepository;
 
     @Autowired
     private ProductCategoryRepository categoryRepository;
-
-
-    @GetMapping("/findByCategory")
-    public List<Product> findByCat(@RequestParam("ids") Long id)
-    {
-        List<Product> products = prepo.findByCategory(id);
-
-        return products;
-    }
-
-    @GetMapping("/ids")
-    public List<Integer> getIds()
-    {
-        List<Integer> ids = prepo.getAllIds();
-
-        return ids;
-    }
+//
+//    @GetMapping("/findProducts")
+//    public List<Product> findProducts(@RequestParam("id") Long id, @RequestParam("name") String name)
+//    {
+//        System.out.println(productRepository.findByCategory(id,name).size());
+//        return productRepository.findByCategory(id,name);
+//    }
 
 
 }

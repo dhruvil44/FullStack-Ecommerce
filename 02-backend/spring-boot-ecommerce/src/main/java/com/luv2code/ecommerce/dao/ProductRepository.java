@@ -15,15 +15,10 @@ import java.util.List;
 @CrossOrigin
 public interface ProductRepository extends JpaRepository<Product,Long> {
 
-    @Query("from Product")
-    public List<Product> getAllProducts();
-
-    @Query("select id from Product")
-    public List<Integer> getAllIds();
-
-
     @Query("from Product p where p.category.id=?1")
-    public List<Product> findByCategory(@RequestParam("ids") Long id);
+    List<Product> ByCategory(@Param("id") Long id);
+
+    List<Product> findByCategoryIdAndNameContaining(@RequestParam("id") Long id,@RequestParam("name")String name);
 
     Page<Product> findByCategoryId(@RequestParam("id") Long id, Pageable pageable);
 
